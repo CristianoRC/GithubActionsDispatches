@@ -12,4 +12,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
         with:
-          header: ${{ github.event.client_payload.text }}
+          header: ${{ github.event.client_payload.header }}
+          subhead: ${{ github.event.client_payload.subhead }}
+          footer: ${{ github.event.client_payload.footer }}
+          excludeActivity: 0
+          repoCount: 0
